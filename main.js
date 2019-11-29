@@ -1,14 +1,10 @@
 // Defining text characters for the empty and full hearts for you to use later.
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
-let errorDiv = document.getElementById("modal .hidden")
 // Your JavaScript code goes here!
-document.addEventListener('DOMContentLoaded', function () {
-  errorDiv.className = "hidden"
-  handleHeartClick()
-})
 
 function handleHeartClick() {
+  let errorDiv = document.getElementById("modal")
   let ul = document.getElementsByTagName("ul")
   for (let i = 0; i < ul.length; i++) {
     let span = ul[i].getElementsByTagName("li")[0].getElementsByTagName("span")[0]
@@ -33,7 +29,7 @@ function handleHeartClick() {
     }
   }
 }
-
+handleHeartClick()
 //------------------------------------------------------------------------------
 // Ignore after this point. Used only for demo purposes
 //------------------------------------------------------------------------------
